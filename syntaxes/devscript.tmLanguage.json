@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "DevScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.devscript",
+				"match": "\\b(if|else|func|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.devscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.devscript",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "main.ds"
+}
